@@ -1,0 +1,29 @@
+body {
+  background-color: #e5d9bb;
+  margin: 1;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navbar {
+  text-align: right;
+}
+nav a {
+  text-decoration: none;
+  color: #8f4e7b;
+  font-size: 20px;
+  margin-left: 10px;
+}
+#recipeInfo {
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+#recipeImage{
+  height: auto;
+width: 100%;
+}
+.content{
+  max-width: 800px;
+
+}

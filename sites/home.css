@@ -1,0 +1,78 @@
+body {
+  background-color: #e5d9bb;
+  margin: 1;
+  padding: 0;
+}
+.logo img{
+  float: left;
+}
+
+.background {
+  background-color: #efe5d8;
+  display: flex;
+  margin: 10%;
+  margin-top:5% ;
+  margin-bottom: 5%;
+  height: 400px;
+  width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 2vh;
+}
+.ust_menu {
+  margin-left: auto;
+}
+.photo_div {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.img_icon {
+  margin-right: 20%;
+  max-width: 80%;
+}
+.navbar {
+
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+
+  
+}
+.logo{
+  text-decoration: none;
+  color: #8f4e7b;
+  font-size: 20px;
+}
+.logo_div{
+display: inline-block;
+}
+nav a {
+  text-decoration: none;
+  color: #8f4e7b;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.text_div {
+  flex: 1;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  padding-left: 15%;
+  padding-top: 8%;
+  font-size: 36px;
+  font-weight: bold;
+}
+.alt_baslik {
+  padding-left: 15%;
+}
+.text2 {
+  padding-left: 15%;
+
+}
+.text2 a {
+  text-decoration: none;
+  color:  #8f4e7b;
+}

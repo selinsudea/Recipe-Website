@@ -1,0 +1,40 @@
+body {
+
+  background-color: #e5d9bb;
+  margin: 1;
+  padding: 0;
+}
+
+.navbar {
+  margin-right: 5%;
+  text-align: right;
+}
+nav a {
+  text-decoration: none;
+  color: #8f4e7b;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.recipes {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recipes div {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid gainsboro;
+  width: calc(33.33% - 2%);
+  margin-left: 1%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #8f4e7b;
+}

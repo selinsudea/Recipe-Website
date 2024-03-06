@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <nav class="ust_menu">
+        <a href="recipes_list.html" class="login">Ana Sayfa</a>
+        <a href="home.html" class="register">Çıkış</a>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1 id="title_recipe"></h1>
+      <div id="recipeInfo">
+        <img id="recipeImage" src="" alt="Görsel Bulunamadı." />
+        <h2 class="ingredients">İçindekiler</h2>
+        <ul>
+          <li><p id="text_recipe"></p></li>
+        </ul>
+        <h2 class="ingredients">Yapılışı</h2>
+        <ol>
+          <li>
+            <p id="direction"></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      var recipeNumber = getParameterByName("recipe");
+      var recipeImageElement = document.getElementById("recipeImage");
+      var recipe_article = document.getElementById("text_recipe");
+      var recipe_direction = document.getElementById("direction");
+      var title_recipes = document.getElementById("title_recipe");
+      if (recipeNumber !== null && !isNaN(recipeNumber)) {
+        if (recipeNumber == 1) {
+          title_recipes.innerHTML = "Magnolia";
+          recipeImageElement.src = "../recipes_img/magnolia.webp";
+          recipe_article.innerHTML =
+            "5 su bardağı süt (1 litre)</li><li>4 yemek kaşığı un</li><li>100 ml krema (yarım kutu)</li><li>3/4 (bir yarım+bir çeyrek) su bardağı şeker</li><li>1 paket vanilya</li><li>1 adet yumurta</li><li>1 paket bebe bisküvisi (yulaflı diğer bisküviler de tercih edilebilir)</li><li>1 su bardağı fındık</li><li>Çilek</li>";
+          (" 5 büyük yumurta, hafifçe dövülmüş</li><li>2 yemek kaşığı süt</li><li>1/4 çay kaşığı tuz</li><li>1/8 çay kaşığı taze çekilmiş karabiber</li><li>1/2 su bardağı doğranmış taze ıspanak</li><li>1/2 su bardağı doğranmış turuncu dolmalık biber</li><li>1/4 bardak ufalanmış beyaz peynir, ayrıca garnitür için daha fazlası</li><li>1 yemek kaşığı dilimlenmiş yeşil soğan, ayrıca garnitür için daha fazlası</li> ");
+          recipe_direction.innerHTML =
+            "Magnolianın muhallebisi için uygun bir tencereye süt, toz şeker, un, yumurta ve sıvı kremayı alalım.</li><li>Malzemelerimizi tel çırpıcıyla karıştırarak pişirmeye başlayalım.</li><li>Muhallebi koyulaşıp göz göz oluncaya kadar karıştırarak pişirelim ve ardından ocağı kapatalım.</li><li>İçerisine vanilya ilave ederek şöyle bir karıştırdıktan sonra muhallebiyi uygun bir karıştırma kabının içerisine alalım.</li><li>Muhallebimiz beklerken üzerini streç filmle kapatalım. Böylelikle üzerinin kabuklanmasını engellemiş oluruz.</li><li>Diğer taraftan bebe bisküvisi ve kavrulmuş fındığı rondoya alalım ve hızlıca rondodan geçirelim.</li><li>Soğuyan muhallebiyi mikserle iki dakika kadar çırpalım.</li><li>Artık tatlıyı sunum yapacağımız kuplara doldurmaya başlayabiliriz. Şimdi kupların tabanına ilk olarak fındıklı bisküvi karışımını yerleştirelim.</li><li>Ardından kuplarımızın kenarlarına dilimlenmiş çilekleri yerleştirelim.</li><li>Çilekleri sıraladıktan sonra muhallebiyi kuplara paylaştıralım. Muhallebinin üzerini de yine kaşığın arka tarafı ile düzeltelim.</li><li>Son olarak muhallebinin üzerine tekrardan hazırladığımız fındıklı bisküvi karışımından yerleştirelim.</li><li>Magnoliamızın üzerini dilimlenmiş çilekle süsleyelim.</li><li>Bu şekilde tatlılarımızı en az 2-3 saat kadar buzdolabında dinlendirdikten sonra çilekli magnolialarımız servise hazır. Afiyet olsun!</li>";
+        } else if (recipeNumber == 2) {
+          title_recipes.innerHTML = "Ispanaklı Pasta";
+          recipeImageElement.src = "../recipes_img/ispanakli-pasta.jpeg";
+          recipe_article.innerHTML =
+            "300 gram ıspanak</li><li>Yarım çay bardağı su</li><li>1 çay bardağı sıvı yağ (yarısını ıspanak püresi için)</li><li>4 adet yumurta</li><li>1 su bardağı şeker</li><li>1 paket kabartma tozu</li><li>1 paket vanilya</li><li>2,5 su bardağı un</li><li><strong>Kreması için;</strong> </li>                                                                                                                                                                          <li>700 gram mascarpone (isteğe göre labne de olur)</li><li>200 gram krema</li><li>1 çay bardağı pudra şekeri</li><li>1 yemek kaşığı fıstık kreması</li><li>1 yemek kaşığı kadar toz antep fıstığı (isteğe göre)</li><li>1 tatlı kaşığı krema sıkılaştırıcı toz</li><li>300 gram kadar çilek veya istenilen meyve</li>";
+          recipe_direction.innerHTML =
+            "Ispanakları yıkayıp, yarım çay bardağı su ve yarım çay bardağı sıvı yağ ekleyip, rondodan geçiriyoruz.</li><li>Kekimiz için; yumurtayı ve şekeri köpürene kadar mikserle çırpıyoruz, ıspanaklı karışımı ekleyip tekrar karıştırıyoruz.</li><li>Vanilya ve kabartma tozu ekleyip karıştırıyoruz, yarım çay bardağı sıvı yağ ekleyip tekrar karıştırıyoruz, en son unu eleyerek ilave ediyoruz tekrar karıştırıp, kelepçeli kalıbımıza döküyoruz.</li><li>180 derece fırında 35 dakika kadar kontrollü şekilde pişiriyoruz.</li><li>Kreması için malzemeleri karıştırma kabına koyup, mikserle çırpıyoruz, içine fıstık kreması ve fıstık tozu ekleyip tekrar karıştırıyoruz.</li><li>Kekimiz soğuduktan sonra üzerinden çok az kesip rondodan geçirerek toz haline getiriyoruz.</li><li>Pasta tabanımızı kelepçeli kalıba koyarak üzerine biraz krema koyup çilekleri yerleştiriyoruz, tekrar krema ile kapatıp, üzerine toz haline getirdiğimiz kekimizi koyup soğumaya bırakıyoruz.</li><li>2-3 saat dinlendirip servis edebilirsiniz, deneyeceklere afiyet olsun!</li>";
+        } else if (recipeNumber == 3) {
+          title_recipes.innerHTML = "Lazanya";
+          recipeImageElement.src = "../recipes_img/lazanya_2.webp";
+          recipe_article.innerHTML =
+            "12 yaprak lazanya</li><li><strong>İç harcı için;</strong></li><li>400 gr kıyma</li><li>3 yemek kaşığı sıvı yağ</li><li>2 adet kuru soğan</li><li>2 adet domates</li><li>2 yemek kaşığı domates salçası</li><li>2 diş sarımsak</li><li>1 tatlı kaşığı tuz</li><li>1,5 su bardağı sıcak su (300 ml)</li><li>Beşamel sosu için;</li><li>2 yemek kaşığı tereyağı</li><li>3 su bardağı süt (600 ml)</li><li>Yarım su bardağı un</li><li>1 çay kaşığı tuz</li><li>Yarım çay kaşığı karabiber</li><li><strong>Üzeri için;</strong></li><li>1 su bardağı kaşar peyniri rendesi</li>";
+          recipe_direction.innerHTML =
+            "İç harcı için geniş bir tavaya sıvı yağı alalım.</li><li>Küçük küçük doğradığımız soğanları ilave edelim, biraz kavurduktan sonra üzerine kıymayı ilave ederek kavurmaya devam edelim.</li><li>Kıymalar yeterince kavrulunca doğradığımız sarımsakları ve kabuğunu soyup doğradığımız domatesleri de ilave edelim ve orta ateşte 5 dakika kadar daha soteleyelim.</li><li>Üzerine salçayı ve tuzu ekleyerek kavuralım.</li><li>Ardından suyunu ekleyelim ve iç harcımız suyunu çekene kadar kısık ateşte pişmeye bırakalım.</li><li><strong>Beşamel sosu için;</strong></li><li>Tereyağı ve unu küçük bir tencereye alalım ve orta ateşte kavurun.</li><li>Üzerine sütü azar azar ekleyelim ve topaklanmaması için sürekli çırparak karıştıralım.</li><li>Kaynamaya başlayınca tuz ve karabiberi ekleyelim. Muhallebi kıvamına gelince ocaktan alalım.</li><li>Kıymalı sos ve beşamel sos hazırlandıktan sonra ısıya dayanıklı bir fırın kabına önce biraz iç harçtan yayalım.</li><li>Üzerine çok az beşamel sostan gezdirdikten sonra lazanyaları dizelim.</li><li>Lazanyaların üzerine biraz kıymalı iç harç ve ardından beşamel sos dökerek güzelce yayalım.</li><li>Üzerine tekrar lazanya yapraklarından yerleştirelim ve tekrar iç harç ve beşamel sostan gezdirelim. Bu işlemi malzemeleriniz bitene kadar devam ettirelim.</li><li>En üstteki lazanyalara tekrar iç harç ve beşamel sos dökelim ve kaşar peyniri rendesi serpelim.</li><li>Lazanyalarımızı önceden ısıtılmış 190 derece fırında yaklaşık 20-25 dakika pişirelim.</li><li>Üzeri tamamen kızarınca fırından alalım ve 15 dakika kadar dinlendirelim.</li><li>Ardından lazanyamızı dilimleyerek servis edelim. Afiyet olsun.</li>";
+        } else if (recipeNumber == 4) {
+          title_recipes.innerHTML = "Zeytinyağlı Enginar";
+          recipeImageElement.src =
+            "../recipes_img/enginar.avif";
+          recipe_article.innerHTML =
+            "6 adet enginar</li><li>Yarım limon suyu (enginarları ovmak için)</li><li>1 adet havuç</li><li>1 adet patates</li><li>1 su bardağı bezelye (haşlanmış ya da konserve)</li><li>1 adet soğan</li><li>1 çay bardağı zeytinyağı</li><li>1 adet limon</li><li>1 çay kaşığı şeker</li><li>1,5 çay kaşığı tuz</li><li>1 su bardağı su</li>";
+          recipe_direction.innerHTML =
+            "Havuç ve patates minik küp şeklinde doğranır ve tencereye alalım, üzerini geçecek kadar su ekleyerek 10 dakika kadar haşlanmaya bırakalım. Burada sebzelerin tam pişmemesi önemli, hafif diri kalması gerekiyor.</li><li>Sebzelerimiz piştikten sonra suyunu süzelim ve bir kenarda bekletelim.</li><li>Ayrı bir tencereye bezelyelerimizi alalım, üzerine su ekleyerek yumuşayıncaya kadar haşlayalım. Dilerseniz konserve bezelye de kullanabilirsiniz. Haşlanan bezelyelerimizin de suyunu süzelim ve bir kenarda bekletelim.</li><li>Soğanı yemeklik doğrayarak yarım çay bardağı zeytinyağında hafif pembeleşene kadar kavuralım.</li><li>Üzerine patates ve havucu ekleyelim. Haşladığımız bezelyeyi de ilave ederek 1-2 dakika karıştıralım ve ocaktan alalım.</li><li>Enginarlarımızı uygun bir kap içerisine alalım, yarım limon suyu ile ovalayalım ve tencereye dizelim.</li><li>Orta kısımlarına hazırladığımız sebzelerden paylaştıralım. Kalan garnitürü de enginarların üzerine paylaştıralım.</li><li>Üzerine zeytinyağı, limon suyu, şeker, tuz ve suyu ekleyerek tencerenin kapağını kapatalım.</li><li>Yemeğimiz kaynayıncaya kadar orta ateşte, kaynadıktan sonra kısık ateşte enginarlar yumuşayana kadar pişirelim. Bu süreç yaklaşık 20-25 dakika sürecektir.</li><li>Pişen enginarlarımızı ocaktan alalım ve soğumaya bırakalım. Ardından servis tabağına alarak suyundan üzerine gezdirelim ve servis edelim. Üzerini dereotu ile de süsleyebilirsiniz.</li>";
+        } else if (recipeNumber == 5) {
+          title_recipes.innerHTML = "Humus";
+          recipeImageElement.src =
+            "../recipes_img/humus.webp";
+          recipe_article.innerHTML ="3 su bardağı haşlanmış nohut</li><li>1/3 su bardağı tahin</li><li>1 limonun suyu veya 2-3 yemek kaşığı hazır limon suyu</li><li>1 çay kaşığı tuz</li><li>2 diş sarımsak</li><li>1/2 (yarım) çay kaşığı kimyon</li><li><strong>Üzeri için:</strong></li><li>1 yemek kaşığı zeytinyağı</li><li>Kırmızı biber</li><li>Sumak</li>";
+          recipe_direction.innerHTML ="İlk olarak haşlanmış nohutların kabuklarını elimizle soyalım.</li><li>Ardından nohutlarımızı rondoya alalım ve üzerine limon suyu, tahin, sarımsak, kimyon ve tuzu ekleyerek karıştıralım.</li><li>Tüm malzemeler birbiri ile özdeşleştikten sonra rondonun kapağını açalım. Eğer humusun istediğiniz kıvamda değilse su ilavesi yaparak ayarlayabilirsiniz.</li><li>Hazırladığımız humusu servis tabağına alalım ve kaşıkla şekillendirelim.</li><li>Ardından süslemek için ortasına haşlanmış nohut ve kırmızı biberle renklendirdiğimiz zeytinyağından gezdirelim.</li><li>Son olarak sumak ve ince kıyılmış maydanoz serperek servis edelim.</li><li>Hazırlaması oldukça kolay mezelerden olan humusu deneyecek herkese şimdiden afiyet olsun!</li>";
+        } else if (recipeNumber == 6) {
+          title_recipes.innerHTML = "Koza Mantısı";
+          recipeImageElement.src =
+            "../recipes_img/koza_mantisi.jpeg";
+          recipe_article.innerHTML ="3 tane yufka</li><li>200 gr kıyma</li><li>Yarım kuru soğan</li><li>Tuz, karabiber, pul biber</li><li><strong>Üzeri için:</strong></li><li>1 kase yoğurt</li><li>1 diş sarımsak</li><li>1 tatlı kaşığı salça</li><li>Çok az sıvı yağ</li><li>Pul biber, nane</li>";
+          recipe_direction.innerHTML ="Önce yufkaları serip ortadan kesip dörtte bölüyoruz.</li><li>Elde ettiğimiz üçgen parçaları tekrardan kesip sekiz parçaya çıkartıyoruz ve daha sonra 2 parmak genişliğinde küçük üçgenler kesiyoruz.</li><li>Kıymayı rendelediğimiz ve suyunu sıktığımız soğan, tuz ve biberlerle karıştırıp çok az bu harçtan üçgenin geniş kısmına koyup sarıyoruz.</li><li>Kenarlarını kapatmadan tüm malzeme bitene kadar devam ediyoruz.</li><li>İster fırında isterseniz de sıvı yağda kızartıp üzerine sarımsaklı yoğurt döküyoruz.</li><li>Onun üzerine de salçayı biraz suyla açıp çok az sıvı yağ ekleyip yaptığımız sosu gezdiriyoruz.</li><li>Nane ve pul biberle süsleyip servis ediyoruz. Afiyet olsun.</li>";
+        }
+      } 
+    </script>
+  </body>
+</html>

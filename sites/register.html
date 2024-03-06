@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <div class="register_div">
+      <div class="img_div">
+        <img
+          src="../img_background/Ekran Resmi 2023-12-30 20.27.15.png"
+          alt=""
+          class="img_food"
+        />
+      </div>
+      <div class="input_div">
+        <div class="navbar">
+          <nav class="ust_menu">
+            <a href="home.html" class="login">Ana Sayfa</a>
+            <a href="login.html" class="register">Giriş Yap</a>
+          </nav>
+        </div>
+
+        <div class="inp_div2">
+          <h2 class="baslik">Kayıt Ol</h2>
+          <form onsubmit="signup()">
+            <input
+              type="text"
+              class="username"
+              ;
+              placeholder="Kullanıcı Adı"
+              id="username"
+              name="username"
+            />
+            <br /><br /><br />
+
+            <input
+              type="password"
+              class="password"
+              ;
+              placeholder="Parola"
+              id="password"
+              name="password"
+            />
+            <br /><br /><br />
+
+            <input
+              type="password"
+              class="repassword"
+              ;
+              placeholder="Yeniden Parola"
+              id="repassword"
+              name="repassword"
+            />
+            <br /><br /><br />
+            <input
+              type="email"
+              class="email"
+              ;
+              placeholder="E-mail"
+              id="e_mail"
+              name="e_mail"
+            />
+            <br />
+            <button type="submit" class="save">Kayıt Ol</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="register_div">
+      <div class="img_div">
+        <img
+          src="../img_background/Ekran Resmi 2023-12-30 20.27.15.png"
+          alt=""
+          class="img_food"
+        />
+      </div>
+      <div class="input_div">
+        <div class="navbar">
+          <nav class="ust_menu">
+            <a href="home.html" class="login">Ana Sayfa</a>
+            <a href="register.html" class="register">Kayıt Ol</a>
+          </nav>
+        </div>
+
+        <div class="inp_div2">
+          <h2 class="baslik">Giriş Yap</h2>
+          <form onsubmit="loginFunc()">
+            <input
+              type="text"
+              class="username"
+              ;
+              placeholder="Kullanıcı Adı"
+              id="username"
+              name="username"
+            />
+            <br /><br /><br />
+
+            <input
+              type="password"
+              class="password"
+              ;
+              placeholder="Parola"
+              id="password"
+              name="password"
+            />
+            <br /><br /><br />
+            <button type="submit" class="login">Giriş Yap</button>
+          </form>
+
+          <a href="register.html" class="remember"
+            >Eğer hesabınız yoksa?</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

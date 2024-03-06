@@ -1,0 +1,54 @@
+
+body {
+  background-color: #f8f6f7;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+}
+
+.register_div {
+  background-color: #f8f6f7;
+  display: flex;
+
+}
+.img_div {
+  flex: 1;
+  max-width: 50%;
+}
+.img_food{
+
+  height: 100%;
+  width: 120%;
+}
+.input_div {
+  flex: 1;
+}
+.navbar {
+  text-align: right;
+}
+nav a {
+  text-decoration: none;
+  color: #8f4e7b;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.inp_div2 {
+  margin-top: 25%;
+  
+}
+.inp_div2 input{
+    width: 55%;
+    padding-top: 3%;
+    margin-left: 30%;
+    text-align: center;
+
+}
+.save{
+    margin-top: 5%;
+    margin-left: 30%;
+
+}
+.baslik{
+    margin-left: 30%;
+}
